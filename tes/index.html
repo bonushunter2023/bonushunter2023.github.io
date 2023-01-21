@@ -1,0 +1,33 @@
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>    
+
+<script>
+		function go(where) {
+			var url = "https://google.com";
+			if (where == "login") {
+				url = "https://google.com"
+			} else if (where == "contact") {
+				url = "https://api.whatsapp.com/";
+			} else if (where == "livechat") {
+				url = "https://google.com";
+			}
+			$("#spinner").show();
+			jQuery('body').css({ opacity: 0.3 });
+			setTimeout(
+			  function() 
+			  {
+			    $(location).attr('href',url);
+			  }, 1000);	
+		}
+		$(document).ready(function() {
+
+          if(window.location.href.indexOf('#policy') != -1) {
+            $('#policy').modal('show');
+          }
+        
+        });
+	</script>	
+
+<a href="#" onclick="go('daftar');"><i class="icons user-plus"></i>Daftar</a>
+<a href="#" onclick="go('contact');"><i class="icons whatsapp" aria-hidden="true"></i>Kontak</a>
+<a href="#" onclick="go('livechat');"><i class="icons chat" aria-hidden="true"></i>Livechat</a>		
+
