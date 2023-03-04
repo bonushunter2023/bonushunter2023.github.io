@@ -1753,6 +1753,8 @@ sup {
 }
 
 .helvetica {
+    color: white;
+    margin: 15px 0px;
     font-family: "helvetica";
 }
 
